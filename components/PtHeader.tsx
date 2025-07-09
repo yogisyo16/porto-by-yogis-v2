@@ -5,10 +5,12 @@ import React from "react";
 // }
 
 export default function PtHeader() {
-    return 
-    <>
-        <div className="bg-amber-300 w-full">
-            <h1>Test</h1>
-        </div>
-    </>;
+    return (
+        <>
+            <div className="flex justify-around bg-[#ffffff] w-full h-[80px]">
+                <h1 className="text-2xl text-[#171717]">Test</h1>
+                <h1 className="text-2xl text-[#171717]">Test</h1>
+            </div>
+        </>
+    )
 }
