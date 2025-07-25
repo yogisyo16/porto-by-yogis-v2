@@ -7,9 +7,9 @@ import React from "react";
 export default function PtHeader() {
     return (
         <>
-            <div className="flex justify-around bg-[#ffffff] w-full h-[80px]">
-                <h1 className="text-2xl text-[#171717]">Test</h1>
-                <h1 className="text-2xl text-[#171717]">Test</h1>
+            <div className="flex justify-around pt-[10px]">
+                <h1 className="text-2xl text-[#ffffff]">PortGis</h1>
+                <h1 className="text-2xl text-[#ffffff]">Yogis</h1>
             </div>
         </>
     )
