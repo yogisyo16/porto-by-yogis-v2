@@ -7,6 +7,9 @@ export default function Home() {
             <PtHeader
                 title="PortGis"
                 subtitle="Yogis"
+                linkAbout="#"
+                linkProject="#"
+                linkContact="#"
             />
         </>
     )
