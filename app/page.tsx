@@ -4,7 +4,10 @@ import PtHeader from "@/components/PtHeader";
 export default function Home() {
     return(
         <>
-            <PtHeader/>
+            <PtHeader
+                title="PortGis"
+                subtitle="Yogis"
+            />
         </>
     )
 }
