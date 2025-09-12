@@ -1,25 +1,30 @@
+/* @import "/utils/basicColor.ts"; */
 @import "tailwindcss";
 
 :root {
-  --background: #722B81;
-  --foreground: #ffffff;
+    --background: var(--color-base-yogis);
+    --foreground: var(--color-neutral-yogis);
 }
 
 .dark {
-  --background: #391a3f;
-  --foreground: #ededed;
+    --background: #391a3f;
+    --foreground: #ededed;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+    --color-base-yogis: #722B81;
+    --color-secondary-yogis: #E3A03B;
+    --color-accent-yogis: #3BA08F;
+    --color-neutral-yogis: #F1F1F1;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
