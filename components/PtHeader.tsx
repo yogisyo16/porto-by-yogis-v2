@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 interface PtHeaderProps {
     title?: string;
     subtitle?: string;
+    titleClick?: string;
     image?: string;
     linkAbout?: string;
     linkProject?: string;
@@ -15,7 +16,9 @@ export default function PtHeader(props: PtHeaderProps) {
     return (
         <>
             <nav className="flex justify-around items-center pt-[20px] pb-[20px] bg-secondary-yogis">
-                <h1 className="text-2xl text-[#ffffff] hover:cursor-pointer">{props.title}</h1> {/* This is going to be Logo */}
+                <a href={ props.titleClick }>
+                    <h1 className="text-2xl text-[#ffffff] hover:cursor-pointer">{props.title}</h1> {/* This is going to be Logo */}
+                </a>
                 <div>
                     <motion.button
                         whileHover={{ scale: 1.1 }}
