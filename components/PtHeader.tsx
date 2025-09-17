@@ -10,12 +10,15 @@ interface PtHeaderProps {
     linkAbout?: string;
     linkProject?: string;
     linkContact?: string;
+    isMobile?: boolean;
 }
 
 export default function PtHeader(props: PtHeaderProps) {
+    const isMobile = props.isMobile || false;
+    
     return (
         <>
-            <nav className="flex justify-around items-center pt-[20px] pb-[20px] bg-secondary-yogis">
+            <nav className="flex justify-around items-center pt-[20px] pb-[20px] px-[10px] md:px-0 bg-secondary-yogis">
                 <a href={ props.titleClick }>
                     <h1 className="text-2xl text-[#ffffff] hover:cursor-pointer">{props.title}</h1> {/* This is going to be Logo */}
                 </a>

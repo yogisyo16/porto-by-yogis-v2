@@ -2,24 +2,38 @@ import React from "react";
 
 export default function PtBody() {
     return (
-        <>
-            {/* Add flex-grow to make this section fill the remaining height */}
-            <section className="flex flex-col justify-center w-full flex-grow pt-[40px]">
-                <div className="flex flex-row justify-center"> {/* Also added justify-center here to center your text */}
-                    <div className="flex flex-col items-center space-y-10">
-                        <h1 className="text-6xl font-bold">HELLO Y’ALL</h1>
-                        <div className="flex flex-row space-x-20">
-                            <div className="flex flex-col px-[10px]">
-                                <h1 className="text-6xl">Yogiswara here</h1>
-                                <h1 className="text-6xl">Software Engineer</h1>
-                            </div>
-                            <div className="flex flex-col px-[10px]">
-                                <h1 className="text-6xl">I am</h1>
-                            </div>
+        // The main container. Centers content vertically and horizontally.
+        // Uses standard padding from the Tailwind theme (p-4, sm:p-10) instead of arbitrary values.
+        <main className="flex flex-grow flex-col items-center justify-center p-4 sm:p-10">
+            <div className="container mx-auto flex flex-col items-center gap-10 text-center md:items-center md:text-left">
+                {/* Main heading of the page. Only one <h1> is recommended for SEO and accessibility. */}
+                <h1 className="text-6xl font-bold">
+                    HELLO Y’ALL
+                </h1>
+
+                {/* Container for the two-column layout. Stacks on mobile (flex-col) and goes side-by-side on medium screens (md:flex-row). */}
+                {/* 'gap' is used for consistent spacing between children. */}
+                <div className="flex w-full flex-col items-center gap-10 md:w-auto md:flex-row md:items-start md:gap-20">
+                    
+                    {/* Left Column: Introduction */}
+                    <div className="flex flex-col gap-4">
+                        <h2 className="text-6xl">Yogiswara here</h2>
+                        <div>
+                            <p className="text-4xl">Full Stack Developer</p>
+                            <p className="text-4xl">Game Developer</p>
                         </div>
                     </div>
+
+                    {/* Right Column: Bio/Statement */}
+                    {/* 'max-w-md' prevents the text from becoming too wide on large screens. */}
+                    <div className="flex-1">
+                         <p className="text-4xl max-w-md">
+                            Open to job opportunities worldwide. Passionate about building and making programs.
+                        </p>
+                    </div>
+
                 </div>
-            </section>
-        </>
+            </div>
+        </main>
     );
 }
