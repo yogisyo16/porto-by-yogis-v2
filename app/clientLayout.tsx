@@ -19,8 +19,12 @@ export default function ClientLayout({
   // This prevents hydration mismatches and handles theme loading.
   if (!isMounted) {
     return (
-        <main className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-black">
-            <h1 className="text-2xl font-bold text-black dark:text-white">Loading...</h1>
+        <main className="flex flex-col items-center justify-start min-h-screen bg-secondary-yogis dark:bg-secondary-yogis/50">
+            <div className="flex flex-col items-center justify-center h-[50vh] min-w-screen bg-accent-yogis dark:bg-accent-yogis/50">
+            </div>
+            <div className="flex flex-col items-center justify-center">
+                <h1 className="text-2xl font-bold text-black dark:text-white">Loading...</h1>
+            </div>
         </main>
     );
   }
