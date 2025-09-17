@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PyAbout() {
+export default function PtAbout() {
     return (
         <>
             <section className="flex flex-col md:justify-center md:w-full md:flex-grow pt-[20px] md:pt-[40px]">

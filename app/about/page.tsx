@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import PtHeader from "@/components/PtHeader";
-import PyAbout from "@/components/AboutPage/PyAbout";
+import PtAbout from "@/components/AboutPage/PtAbout";
 
 export default function About() {
     return(
@@ -15,7 +15,7 @@ export default function About() {
                     linkProject="#"
                     linkContact="#"
                 />
-                <PyAbout />
+                <PtAbout />
             </main>
         </>
     )
