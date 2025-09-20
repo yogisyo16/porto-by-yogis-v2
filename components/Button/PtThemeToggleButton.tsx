@@ -23,7 +23,7 @@ export default function PtThemeToggleButton() {
   return (
     <button
       onClick={toggleTheme}
-      className="px-4 py-2 rounded-md bg-white/20 hover:bg-white/30 transition-colors"
+      className="px-2 py-2 rounded-md bg-white/20 hover:bg-white/30 transition-colors"
     >
       {theme === "dark" ? "Light" : "Dark"} Mode
     </button>
