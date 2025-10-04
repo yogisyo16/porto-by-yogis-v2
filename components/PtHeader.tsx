@@ -27,19 +27,19 @@ export default function PtHeader(props: PtHeaderProps) {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        <a href={props.linkAbout} className="ml-4 border-0 p-[8px] rounded-[100px] text-base-yogis font-bold hover:text-black hover:cursor-pointer hover:bg-gray-200">About</a>
+                        <a href={props.linkAbout} className="ml-4 border-0 p-[8px] rounded-[100px] text-white font-bold hover:text-black hover:cursor-pointer hover:bg-gray-200">About</a>
                     </motion.button>
                     <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        <a href={props.linkProject} className="ml-4 border-0 p-[8px] rounded-[100px] text-base-yogis font-bold hover:text-black hover:cursor-pointer hover:bg-gray-200">Projects</a>
+                        <a href={props.linkProject} className="ml-4 border-0 p-[8px] rounded-[100px] text-white font-bold hover:text-black hover:cursor-pointer hover:bg-gray-200">Projects</a>
                     </motion.button>
                     <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        <a href={props.linkContact} className="ml-4 border-0 p-[8px] rounded-[100px] text-base-yogis font-bold hover:text-black hover:cursor-pointer hover:bg-gray-200">Contact</a>
+                        <a href={props.linkContact} className="ml-4 border-0 p-[8px] rounded-[100px] text-white font-bold hover:text-black hover:cursor-pointer hover:bg-gray-200">Contact</a>
                     </motion.button>
                 </div>
                 <PtThemeToggleButton /> {/* Dark Mode and also image will be here */}
