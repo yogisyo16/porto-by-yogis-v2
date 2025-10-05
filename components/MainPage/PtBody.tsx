@@ -10,7 +10,11 @@ interface SkillCardProps {
 
 interface ProjectProps {
     title: string;
-    description: string;
+    description1: string;
+    description2?: string;
+    description3?: string;
+    description4?: string;
+    description5?: string;
     image: string;
     link: string;
 }
@@ -35,13 +39,17 @@ function SkillCard({ name, icon, gif }: SkillCardProps) {
     );
 }
 
-function ProjectCard({ title, description, image, link }: ProjectProps) {
+function ProjectCard({ title, description1, description2, description3, description4, description5, image, link }: ProjectProps) {
     return (
         <div className="flex flex-row items-center gap-4 rounded-2xl bg-accent-yogis p-4">
             <img className="h-[200px] w-[200px]" src={image} alt={title} />
             <div className="flex flex-col">
                 <h3 className="text-white font-bold text-[22px]">{title}</h3>
-                <p className="text-white">{description}</p>
+                <p className="text-white">{description1}</p>
+                <p className="text-white">{description2}</p>
+                <p className="text-white">{description3}</p>
+                <p className="text-white">{description4}</p>
+                <p className="text-white">{description5}</p>
                 <a href={link} className="text-white font-bold">View Project</a>
             </div>
         </div>
@@ -99,7 +107,11 @@ export default function PtBody() {
                                 <ProjectCard
                                     key={project.title}
                                     title={project.title}
-                                    description={project.description}
+                                    description1={project.description1}
+                                    description2={project.description2}
+                                    description3={project.description3}
+                                    description4={project.description4}
+                                    description5={project.description5}
                                     image={project.image}
                                     link={project.link}
                                 />

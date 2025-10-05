@@ -2,6 +2,7 @@
 import React from "react";
 import PtHeader from "@/components/PtHeader";
 import PtAbout from "@/components/AboutPage/PtAbout";
+import ThreeScene from "@/components/Three/ThreeScene";
 
 export default function About() {
     return(
@@ -15,7 +16,7 @@ export default function About() {
                     linkProject="#"
                     linkContact="#"
                 />
-                <PtAbout />
+                <ThreeScene/>
             </main>
         </>
     )
