@@ -9,14 +9,15 @@ interface SkillCardProps {
 }
 
 interface ProjectProps {
-    title: string;
-    description1: string;
-    description2?: string;
-    description3?: string;
-    description4?: string;
-    description5?: string;
-    image: string;
-    link: string;
+    title: string | undefined;
+    note?: string | undefined;
+    description1: string | undefined;
+    description2?: string | undefined;
+    description3?: string | undefined;
+    description4?: string | undefined;
+    description5?: string | undefined;
+    image: string | undefined;
+    link: string | undefined;
 }
 
 function SkillCard({ name, icon, gif }: SkillCardProps) {
@@ -39,18 +40,25 @@ function SkillCard({ name, icon, gif }: SkillCardProps) {
     );
 }
 
-function ProjectCard({ title, description1, description2, description3, description4, description5, image, link }: ProjectProps) {
+function ProjectCard(props: ProjectProps) {
     return (
-        <div className="flex flex-row items-center gap-4 rounded-2xl bg-accent-yogis p-4">
-            <img className="h-[200px] w-[200px]" src={image} alt={title} />
-            <div className="flex flex-col w-[500px] gap-[8px]">
-                <h3 className="text-white font-bold text-[22px]">{title}</h3>
-                <p className="text-white text-wrap">{description1}</p>
-                <p className="text-white text-wrap">{description2}</p>
-                <p className="text-white text-wrap">{description3}</p>
-                <p className="text-white text-wrap">{description4}</p>
-                <p className="text-white text-wrap">{description5}</p>
-                <a href={link} className="text-white text-center font-bold w-[200px] border-0 p-[8px] rounded-[100px] hover:bg-secondary-yogis/50">View Project</a>
+        <div className="flex flex-col items-center gap-4 rounded-2xl bg-accent-yogis p-4">
+            <div className="flex flex-row items-center gap-4">
+                <img className="h-[200px] w-[200px]" src={props.image} alt={props.title} />
+                <div className="flex flex-col w-[500px] gap-[8px]">
+                    <div>
+                        <h3 className="text-white font-bold text-[22px]">{props.title}</h3>
+                        <p className="text-white text-xs">Note*: {props.note}</p>
+                    </div>
+                    <p className="text-white text-wrap">{props.description1}</p>
+                    <p className="text-white text-wrap">{props.description2}</p>
+                    <p className="text-white text-wrap">{props.description3}</p>
+                    <p className="text-white text-wrap">{props.description4}</p>
+                    <p className="text-white text-wrap">{props.description5}</p>
+                </div>
+            </div>
+            <div className="flex flex-row justify-center">
+                <a href={props.link} className="text-white text-center font-bold w-[200px] border-0 p-[8px] rounded-[100px] hover:bg-secondary-yogis/50">View Project</a>
             </div>
         </div>
     );
@@ -108,6 +116,7 @@ export default function PtBody() {
                                 <ProjectCard
                                     key={project.title}
                                     title={project.title}
+                                    note={project.note}
                                     description1={project.description1}
                                     description2={project.description2}
                                     description3={project.description3}

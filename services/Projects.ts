@@ -2,6 +2,7 @@ export const projects = [
     {
         id: 1,
         title: "The Honcho App",
+        note: "Using office github repo.",
         description1: "1. Slicing UI from Figma.",
         description2: "2. Creating a frontend for dashboard and public gallery.",
         description3: "3. Create features for image editor for website and webview (Native communication).",
@@ -21,5 +22,9 @@ export const projects = [
         image: "https://placehold.co/600x400?font=roboto",
         link: "#",
     },
+    {
+        id: 3,
+        title: "Prepare Your Money"
+    }
     // Add more projects here
 ];
