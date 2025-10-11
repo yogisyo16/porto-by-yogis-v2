@@ -43,14 +43,14 @@ function ProjectCard({ title, description1, description2, description3, descript
     return (
         <div className="flex flex-row items-center gap-4 rounded-2xl bg-accent-yogis p-4">
             <img className="h-[200px] w-[200px]" src={image} alt={title} />
-            <div className="flex flex-col">
+            <div className="flex flex-col w-[500px] gap-[8px]">
                 <h3 className="text-white font-bold text-[22px]">{title}</h3>
-                <p className="text-white">{description1}</p>
-                <p className="text-white">{description2}</p>
-                <p className="text-white">{description3}</p>
-                <p className="text-white">{description4}</p>
-                <p className="text-white">{description5}</p>
-                <a href={link} className="text-white font-bold">View Project</a>
+                <p className="text-white text-wrap">{description1}</p>
+                <p className="text-white text-wrap">{description2}</p>
+                <p className="text-white text-wrap">{description3}</p>
+                <p className="text-white text-wrap">{description4}</p>
+                <p className="text-white text-wrap">{description5}</p>
+                <a href={link} className="text-white text-center font-bold w-[200px] border-0 p-[8px] rounded-[100px] hover:bg-secondary-yogis/50">View Project</a>
             </div>
         </div>
     );
@@ -102,6 +102,7 @@ export default function PtBody() {
                 </section>
                 <section>
                     <div className="container flex flex-col gap-2 w-auto h-auto justify-center items-center">
+                        <h2 className="text-6xl font-bold pb-[15px]">Projects</h2>
                         {
                             projects.map((project) => (
                                 <ProjectCard

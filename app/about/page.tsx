@@ -16,7 +16,7 @@ export default function About() {
                     linkProject="#"
                     linkContact="#"
                 />
-                <ThreeScene/>
+                {/* <ThreeScene/> */}
             </main>
         </>
     )
